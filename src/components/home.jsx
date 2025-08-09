@@ -3,9 +3,9 @@ import {useNavigate } from "react-router-dom";
 function HomePage() {
   const navigate = useNavigate();
   return (
-    <div className="center-wrap">
-      <button className="center-button" onClick={() => navigate("/new")}>
-        Show New Component
+    <div className="home-page">
+      <button className="home-page-button" onClick={() => navigate("/jsondiff")}>
+        Open JSON Diff Tool
       </button>
     </div>
   );

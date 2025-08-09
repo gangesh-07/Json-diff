@@ -1,52 +1,50 @@
 :root {
-    --header-h: 60px;
+    --header-h: 40px;
 }
 
 .app {
-    min-height: 100vh;
-}
-
-/* Fixed header */
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--header-h);
+    height: 100vh; /* full viewport for layout math */
     display: flex;
-    align-items: center;
-    padding: 0 16px;
-    background: #333;
-    color: #fff;
-    z-index: 1000;
-}
+    flex-direction: column;
 
-/* Content area sits below header */
-.content {
-    margin-top: var(--header-h);
-    min-height: calc(100vh - var(--header-h));
-}
+    /* Fixed header */
+    .navBar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: var(--header-h);
+        display: flex;
+        align-items: center;
+        background: #333;
+        color: #fff;
+        z-index: 1000;
+    }
 
-/* Home page: center the button */
-.center-wrap {
-    height: calc(100vh - var(--header-h));
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    /* Content area sits below header */
+    .content {
+        padding: 0;
+        margin-top: var(--header-h);
+        height: calc(100vh - var(--header-h));
+    }
 
-/* Button styles */
-.menu-button {
-    background: #4caf50;
-    color: #fff;
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-weight: 600;
-}
-.center-button {
-    background: #007bff;
-    color: #fff;
-    padding: 12px 18px;
-    border-radius: 8px;
-    font-weight: 600;
+    .menu-button {
+        margin-left: 20px;
+    }
+
+    .home-page {
+        height: 100vh; /* full viewport height */
+        display: flex;
+        align-items: center; /* vertical center */
+        justify-content: center; /* horizontal center */
+    }
+
+    .home-page button {
+        background: #007bff;
+        font-weight: 600;
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+    }
 }
